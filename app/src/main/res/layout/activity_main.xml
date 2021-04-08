@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtBaseDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="163dp"
+        android:ems="10"
+        android:hint="Base Damage"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="RPG Damage Calculator"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCritChance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Crit % (4.5%=4.5)"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtAttackSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/txtAttackSpeed" />
+
+    <EditText
+        android:id="@+id/txtAttackSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Hits Per Second"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtBaseDamage"
+        app:layout_constraintTop_toBottomOf="@+id/txtBaseDamage" />
+
+    <EditText
+        android:id="@+id/txtBaseArmor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Base Armor"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtCritChance"
+        app:layout_constraintTop_toBottomOf="@+id/txtCritChance" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:text="Assumes Crit Buff is 1.5x Damage"
+        app:layout_constraintEnd_toEndOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <EditText
+        android:id="@+id/txtBaseHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:ems="10"
+        android:hint="Base Health"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtBaseArmor"
+        app:layout_constraintTop_toBottomOf="@+id/txtBaseArmor" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="16dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtHealthPerSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:ems="10"
+        android:hint="Health Per Second"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtBaseHealth"
+        app:layout_constraintTop_toBottomOf="@+id/txtBaseHealth" />
+
+    <EditText
+        android:id="@+id/txtBaseMagic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Base Magic"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtHealthPerSecond"
+        app:layout_constraintTop_toBottomOf="@+id/txtHealthPerSecond" />
+
+    <EditText
+        android:id="@+id/txtMagicPerSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Magic Per Second"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtBaseMagic"
+        app:layout_constraintTop_toBottomOf="@+id/txtBaseMagic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
